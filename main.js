@@ -1,8 +1,3 @@
-/* =========================================================
-   Studio Five — main.js
-   Member profile data & slide card interaction
-   ========================================================= */
-
 const members = [
   {
     initials : 'A',
@@ -13,7 +8,7 @@ const members = [
     badgeColor: '#3C3489',
     avatarBg : '#EEEDFE',
     avatarColor: '#3C3489',
-    bio      : 'Crafts intuitive interfaces with a focus on accessibility and motion design. Alex brings 4 years of product design experience across fintech and healthtech, and believes great UX starts long before the first wireframe.',
+    bio      : '',
     tags     : ['Collaboration', 'Prototyping', 'Leadership'],
     links    : ['Portfolio', 'LinkedIn', 'Dribbble'],
   },
@@ -26,7 +21,7 @@ const members = [
     badgeColor: '#085041',
     avatarBg : '#E1F5EE',
     avatarColor: '#085041',
-    bio      : 'Builds fast, component-driven UIs with React and TypeScript. Blake is obsessed with performance optimization — Core Web Vitals are never an afterthought. Open source contributor with 2k+ GitHub stars.',
+    bio      : '',
     tags     : ['Strategy', 'Research', 'Planning'],
     links    : ['GitHub', 'LinkedIn', 'Blog'],
   },
@@ -39,7 +34,7 @@ const members = [
     badgeColor: '#633806',
     avatarBg : '#FAEEDA',
     avatarColor: '#633806',
-    bio      : 'Designs scalable APIs and data pipelines that stay boring at 3 AM. Casey is a passionate open source contributor and DevOps enthusiast who believes good infrastructure is invisible.',
+    bio      : '',
     tags     : ['Accounting', 'Financial Analysis', 'Budget Planning'],
     links    : ['GitHub', 'LinkedIn', 'Dev.to'],
   },
@@ -52,7 +47,7 @@ const members = [
     badgeColor: '#711B13',
     avatarBg : '#FAECE7',
     avatarColor: '#711B13',
-    bio      : 'Defines visual identities and messaging frameworks that last. Dana bridges design thinking with business goals, helping companies find a voice that is unmistakably theirs.',
+    bio      : '',
     tags     : ['Marketing', 'Socials', 'Network'],
     links    : ['Portfolio', 'LinkedIn', 'Twitter'],
   },

@@ -186,12 +186,14 @@ a {
   gap: 4px;
   transform: translateY(-8px);
   opacity: 0;
+  pointer-events: none;
   transition: transform var(--transition), opacity var(--transition);
 }
 
 .nav-drawer.open {
   transform: translateY(0);
   opacity: 1;
+  pointer-events: auto;
 }
 
 .nav-drawer a {
@@ -738,6 +740,8 @@ a {
   background: var(--bg-soft);
   gap: 1.5rem;
   text-align: center;
+  padding-left: clamp(1rem, 5vw, 4rem);
+  padding-right: clamp(1rem, 5vw, 4rem);
 }
 
 .contact-inner {
@@ -746,6 +750,13 @@ a {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  align-items: stretch;
+}
+
+.contact-inner .btn {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .contact-heading {
@@ -824,6 +835,7 @@ footer {
   .nav-links { display: none; }
   .nav-toggle { display: flex; }
   .nav-drawer { display: flex; }
+  .nav-drawer:not(.open) { pointer-events: none; }
 
   .section { padding: 3rem 1.25rem; }
 
@@ -873,7 +885,7 @@ footer {
   .detail-badge { display: none; }
 
   .btn-row { flex-direction: column; align-items: center; }
-  .btn      { width: 100%; max-width: 280px; text-align: center; }
+  .btn-row .btn { width: 100%; max-width: 280px; text-align: center; }
 
   footer { font-size: 12px; padding: 1.5rem 1rem; }
 }
@@ -883,6 +895,55 @@ footer {
   .member-card   { flex: 0 0 145px; }
   .about-stats   { grid-template-columns: 1fr 1fr; }
   .contact-inner { gap: 10px; }
+}
+
+/* Smallest phones (≤ 320px) */
+@media (max-width: 320px) {
+  :root { --nav-h: 50px; }
+
+  .nav { padding: 0 0.75rem; }
+  .nav-logo { font-size: 15px; }
+
+  .section { padding: 2rem 0.75rem; min-height: auto; }
+
+  .hero-title { font-size: 1.75rem; letter-spacing: -0.02em; }
+  .hero-sub   { font-size: 0.9rem; }
+  .btn-row    { flex-direction: column; align-items: center; }
+  .btn-row .btn { width: 100%; max-width: 240px; text-align: center; font-size: 13px; }
+
+  .about-inner blockquote { font-size: 1.05rem; }
+  .about-stats { grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .stat-number { font-size: 1.2rem; }
+  .stat-label  { font-size: 10px; }
+  .stat-card   { padding: 0.9rem 0.6rem; }
+
+  .member-card { flex: 0 0 155px; padding: 1rem 0.9rem; }
+  .card-name   { font-size: 13px; }
+  .card-role   { font-size: 11px; }
+  .avatar      { width: 44px; height: 44px; font-size: 13px; }
+  .tag         { font-size: 10px; padding: 2px 7px; }
+
+  .detail-panel   { padding: 1rem; }
+  .detail-name    { font-size: 15px; }
+  .detail-badge   { display: none; }
+
+  .projects-grid,
+  .skills-grid    { grid-template-columns: 1fr; gap: 0.75rem; }
+  .project-thumb  { height: 70px; font-size: 22px; }
+  .project-card   { padding: 1rem; }
+  .project-card h3 { font-size: 13px; }
+  .project-card p  { font-size: 12px; }
+
+  .skill-group    { padding: 1rem; }
+  .skill-list li  { font-size: 12px; }
+
+  .contact-inner  { gap: 8px; }
+  .contact-heading { font-size: 1.35rem; }
+  .contact-sub    { font-size: 13px; }
+  .field          { padding: 9px 12px; font-size: 13px; }
+  .contact-member { font-size: 11px; padding: 3px 9px 3px 5px; }
+
+  footer { font-size: 11px; padding: 1.25rem 0.75rem; }
 }
 
 /* =========================================================
