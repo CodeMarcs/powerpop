@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Power Pap</title>
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav class="nav" id="mainNav">
+    <a href="#hero" class="nav-logo">Power Pap<span></span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#members">Team</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact" class="nav-cta">Get in touch</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ── Mobile drawer ── -->
+  <div class="nav-drawer" id="navDrawer">
+    <a href="#about"   onclick="closeDrawer()">About</a>
+    <a href="#members" onclick="closeDrawer()">Team</a>
+    <a href="#work"    onclick="closeDrawer()">Work</a>
+    <a href="#skills"  onclick="closeDrawer()">Skills</a>
+    <a href="#contact" onclick="closeDrawer()">Get in touch</a>
+  </div>
+
+  <!-- ── Scroll-up button ── -->
+  <button class="scroll-up" id="scrollUp" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- ══════════════════════════════════════════
+       SECTION 1 — HERO
+  ══════════════════════════════════════════ -->
+  <section class="section" id="hero">
+    <p class="hero-eyebrow">A creative collective</p>
+    <h1 class="hero-title">We design &amp; build<br><em>thoughtful digital</em> experiences.</h1>
+    <p class="hero-sub">
+        Anak ni Professsor Plutonium
+    </p>
+    <div class="hero-avatars">
+      <div class="avatar" style="background:#EEEDFE;color:#346689;">A</div>
+      <div class="avatar" style="background:#E1F5EE;color:#085041;">JK</div>
+      <div class="avatar" style="background:#FAEEDA;color:#633806;">KE</div>
+      <div class="avatar" style="background:#FAECE7;color:#711B13;">JM</div>
+      <div class="avatar" style="background:#FBEAF0;color:#72243E;">JS</div>
+    </div>
+    <div class="btn-row">
+      <a href="#members" class="btn primary">Meet the team</a>
+      <a href="#work"    class="btn">See our goals</a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SECTION 2 — ABOUT
+  ══════════════════════════════════════════ -->
+  <section class="section" id="about">
+    <div class="about-inner">
+      <p class="section-eyebrow">Our Milestones</p>
+      <blockquote>
+        We believe great products come from <em>diverse perspectives</em> working as one.
+      </blockquote>
+      <p style="font-size:15px;color:var(--muted);margin-top:1.5rem;line-height:1.75;">
+        We are Power Pap, a team of five friends. Happy Friends WKWKWKWKW
+      </p>
+      <div class="about-stats">
+        <div class="stat-card">
+          <p class="stat-number">40+</p>
+          <p class="stat-label">Accomplished Activities</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-number">1</p>
+          <p class="stat-label">Year known each other</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-number">2</p>
+          <p class="stat-label">Friend Circles</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SECTION 3 — MEMBERS (slide cards)
+  ══════════════════════════════════════════ -->
+  <section class="section" id="members">
+    <div>
+      <p class="section-eyebrow">The team</p>
+      <h2 class="section-heading">Meet the five</h2>
+    </div>
+
+    <div class="slides-track" id="slidesTrack">
+
+      <!-- Card 1 — Araiza "Aiz" Sotto -->
+      <div class="member-card" onclick="showDetail(0)">
+        <div class="card-avatar avatar" style="background:#EEEDFE;color:#3C3489;">A</div>
+        <p class="card-name">Araiza "Aiz" Sotto</p>
+        <p class="card-role">Team Lead</p>
+        <div class="tags">
+          <span class="tag">Collaboration</span>
+          <span class="tag">Prototyping</span>
+          <span class="tag">Leadership</span>
+        </div>
+      </div>
+
+      <!-- Card 2 — Jennifer Kim Orallo -->
+      <div class="member-card" onclick="showDetail(1)">
+        <div class="card-avatar avatar" style="background:#E1F5EE;color:#085041;">JK</div>
+        <p class="card-name">Jennifer Kim Orallo</p>
+        <p class="card-role">Plan Lead</p>
+        <div class="tags">
+          <span class="tag">Strategy</span>
+          <span class="tag">Research</span>
+          <span class="tag">Planning</span>
+        </div>
+      </div>
+
+      <!-- Card 3 — Kisha Erica Narag -->
+      <div class="member-card" onclick="showDetail(2)">
+        <div class="card-avatar avatar" style="background:#FAEEDA;color:#633806;">KE</div>
+        <p class="card-name">Kisha Erica Narag</p>
+        <p class="card-role">Finance Lead</p>
+        <div class="tags">
+          <span class="tag">Accounting</span>
+          <span class="tag">Financial Analysis</span>
+          <span class="tag">Budget Planning</span>
+        </div>
+      </div>
+
+      <!-- Card 4 — Janna Sophia Garcia -->
+      <div class="member-card" onclick="showDetail(3)">
+        <div class="card-avatar avatar" style="background:#FAECE7;color:#711B13;">JS</div>
+        <p class="card-name">Janna Sophia Garcia</p>
+        <p class="card-role">Marketing Lead</p>
+        <div class="tags">
+          <span class="tag">Branding</span>
+          <span class="tag">Socials</span>
+          <span class="tag">Network</span>
+        </div>
+      </div>
+
+      <!-- Card 5 — John Marcus Manalo -->
+      <div class="member-card" onclick="showDetail(4)">
+        <div class="card-avatar avatar" style="background:#FBEAF0;color:#72243E;">JM</div>
+        <p class="card-name">John Marcus Manalo</p>
+        <p class="card-role">Manipulator</p>
+        <div class="tags">
+          <span class="tag">Love</span>
+          <span class="tag">Joy</span>
+          <span class="tag">Hope</span>
+        </div>
+      </div>
+
+    </div><!-- /slides-track -->
+
+    <!-- Detail panel — populated by JS on card click -->
+    <div class="detail-panel" id="detailPanel"></div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SECTION 4 — WORK
+  ══════════════════════════════════════════ -->
+  <section class="section" id="work">
+    <div class="work-header">
+      <p class="section-eyebrow">Selected projects</p>
+      <h2 class="section-heading">Our work</h2>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-thumb" style="background:#EEEDFE;">📊</div>
+        <h3>Marketing Strategy</h3>
+        <p>Janna · Social media campaigns</p>
+      </div>
+      <div class="project-card">
+        <div class="project-thumb" style="background:#FBEAF0;">🎨</div>
+        <h3>UI/UX Design</h3>
+        <p>Jennifer + Kisha · Simple yet beautiful interfaces</p>
+      </div>
+      <div class="project-card">
+        <div class="project-thumb" style="background:#FAEEDA;">⚙️</div>
+        <h3>Website Development</h3>
+        <p>Marcus · Simple driven development</p>
+      </div>
+      <div class="project-card">
+        <div class="project-thumb" style="background:#E1F5EE;">✨</div>
+        <h3>Website Redesign</h3>
+        <p>Aiz · Revamping the user experience</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SECTION 5 — SKILLS
+  ══════════════════════════════════════════ -->
+  <section class="section" id="skills">
+    <div style="text-align:center;">
+      <p class="section-eyebrow">What we bring</p>
+      <h2 class="section-heading">Collective skills</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <p class="skill-group-name"><span class="skill-dot" style="background:var(--accent-1);"></span>Design</p>
+        <ul class="skill-list">
+          <li>User research &amp; testing</li>
+          <li>Interaction design</li>
+          <li>Accessibility</li>
+          <li>Design systems</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <p class="skill-group-name"><span class="skill-dot" style="background:var(--accent-2);"></span>Frontend</p>
+        <ul class="skill-list">
+          <li>Null</li>
+          <li>Null</li>
+          <li>Null</li>
+          <li>Performance tuning</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <p class="skill-group-name"><span class="skill-dot" style="background:var(--accent-3);"></span>Backend</p>
+        <ul class="skill-list">
+          <li>Null</li>
+          <li>Null</li>
+          <li>Null</li>
+          <li>Null</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <p class="skill-group-name"><span class="skill-dot" style="background:var(--accent-4);"></span>Brand</p>
+        <ul class="skill-list">
+          <li>Visual identity</li>
+          <li>Messaging &amp; copy</li>
+          <li>Content strategy</li>
+          <li>Brand guidelines</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <p class="skill-group-name"><span class="skill-dot" style="background:var(--accent-5);"></span>Motion</p>
+        <ul class="skill-list">
+          <li>After Effects</li>
+          <li>Lottie / Rive</li>
+          <li>WebGL / Three.js</li>
+          <li>GSAP animations</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SECTION 6 — CONTACT
+  ══════════════════════════════════════════ -->
+  <section class="section" id="contact">
+    <div class="contact-inner">
+      <p class="section-eyebrow" style="text-align:center;">Say hello</p>
+      <h2 class="contact-heading">Get in touch</h2>
+      <p class="contact-sub">Have a project in mind? We'd love to hear from you.</p>
+      <input  class="field" type="email"   placeholder="Your email address" />
+      <textarea class="field" rows="4"     placeholder="Tell us about your project"></textarea>
+      <button class="btn primary">Send message</button>
+      <div class="contact-members">
+        <div class="contact-member">
+          <div class="avatar" style="background:#EEEDFE;color:#3C3489;width:24px;height:24px;font-size:10px;">A</div>Araiza
+        </div>
+        <div class="contact-member">
+          <div class="avatar" style="background:#E1F5EE;color:#085041;width:24px;height:24px;font-size:10px;">JK</div>Jennifer
+        </div>
+        <div class="contact-member">
+          <div class="avatar" style="background:#FAEEDA;color:#633806;width:24px;height:24px;font-size:10px;">KE</div>Kisha
+        </div>
+        <div class="contact-member">
+          <div class="avatar" style="background:#FAECE7;color:#711B13;width:24px;height:24px;font-size:10px;">JS</div>Janna
+        </div>
+        <div class="contact-member">
+          <div class="avatar" style="background:#FBEAF0;color:#72243E;width:24px;height:24px;font-size:10px;">JM</div>Marcus
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <p>© 2025 Power Pap | Built with curiosity and caffeine.</p>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    /* ── Nav scroll shadow ── */
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 10);
+      document.getElementById('scrollUp').classList.toggle('visible', window.scrollY > 300);
+    });
+
+    /* ── Mobile drawer ── */
+    const toggle = document.getElementById('navToggle');
+    const drawer = document.getElementById('navDrawer');
+    toggle.addEventListener('click', () => {
+      const open = toggle.classList.toggle('open');
+      drawer.classList.toggle('open', open);
+    });
+    function closeDrawer() {
+      toggle.classList.remove('open');
+      drawer.classList.remove('open');
+    }
+  </script>
+</body>
+</html>
